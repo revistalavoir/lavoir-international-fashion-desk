@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manziniiliana.github.io/lavoir-international-fashion-desk/sitemap.xml
+Sitemap: https://revistalavoir.github.io/lavoir-international-fashion-desk/sitemap.xml
