@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://manziniiliana.github.io/lavoir-international-fashion-desk/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://manziniiliana.github.io/lavoir-international-fashion-desk/index-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://manziniiliana.github.io/lavoir-international-fashion-desk/"/>
+    <loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/"/>
   </url>
   <url>
-    <loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/index-es.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://manziniiliana.github.io/lavoir-international-fashion-desk/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://manziniiliana.github.io/lavoir-international-fashion-desk/index-es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://manziniiliana.github.io/lavoir-international-fashion-desk/"/>
+    <loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/index-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/"/>
   </url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/culture.html</loc></url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/industry.html</loc></url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/portfolio.html</loc></url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/media-kit/LAVOIR-Media-Kit-English.html</loc></url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/english-selection.html</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/image-credits.html</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://manziniiliana.github.io/lavoir-international-fashion-desk/image-credits-es.html</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/culture.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/industry.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/portfolio.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/english-selection.html</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/lujan-saez-launches-ls.html</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/brioni-la-donna-atelier-ss27.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/media-kit/LAVOIR-Media-Kit-English.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/image-credits.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/image-credits-es.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/weather.html</loc></url>
+  <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/world-weather.html</loc></url>
 </urlset>
