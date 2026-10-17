@@ -22,4 +22,14 @@
   <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/image-credits.html</loc></url>
   <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/image-credits-es.html</loc></url>
   <url><loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/world-weather.html</loc></url>
+  <url>
+    <loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/nicole-neumann-sofia-zamolo-fashion-show.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/nicole-neumann-sofia-zamolo-fashion-show.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/desfile-moda-nicole-neumann-sofia-zamolo.html"/>
+  </url>
+  <url>
+    <loc>https://revistalavoir.github.io/lavoir-international-fashion-desk/desfile-moda-nicole-neumann-sofia-zamolo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/nicole-neumann-sofia-zamolo-fashion-show.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://revistalavoir.github.io/lavoir-international-fashion-desk/desfile-moda-nicole-neumann-sofia-zamolo.html"/>
+  </url>
 </urlset>
