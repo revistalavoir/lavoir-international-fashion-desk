@@ -323,7 +323,7 @@ header .site-icons a.membership-link:active {
 #fashion-news .lead-carousel .article.is-active{display:grid;animation:leadNewsIn .55s ease both}
 #fashion-news .lead-carousel .article .meta,
 #fashion-news .lead-carousel .article p{color:#e4d8d0}
-#fashion-news .lead-carousel .article h3{font-size:clamp(30px,4vw,48px);max-width:850px}
+#fashion-news .lead-carousel .article h3{font-size:clamp(30px,4vw,48px);max-width:850px;color:#fff!important}
 #fashion-news .lead-carousel .article .read{color:var(--ink);border-color:var(--ink)}
 #fashion-news .lead-controls{display:flex;align-items:center;justify-content:center;gap:18px;padding:13px 0 0}
 #fashion-news .lead-controls button{cursor:pointer}
@@ -483,6 +483,12 @@ footer{background:#050505;color:#bbb;border-top:3px solid #0757ff}
 /* Mobile-only supporting news card: Mirta Armesto fashion show */
 #fashion-news .mobile-news-card{display:none}
 @media(max-width:800px){#fashion-news .mobile-news-card{display:flex;grid-column:1/-1;flex-direction:column;gap:10px;background:#fffdf9;border:1px solid rgba(17,17,30,.18);padding:22px 20px;margin:0 0 16px;min-width:0}#fashion-news .mobile-news-card .meta{font-size:9px;letter-spacing:1.4px;color:#5a1020}#fashion-news .mobile-news-card h3{font:400 25px/1.12 Georgia,serif;color:#5a1020;margin:0 0 8px}#fashion-news .mobile-news-card p{font-size:13px;line-height:1.7;color:#5e5050}#fashion-news .mobile-news-card .read{align-self:flex-start;margin-top:8px}}
+
+/* Contrast fix: animated lead-news headlines must remain white on the dark panel. */
+#fashion-news .lead-carousel .article h3 a,
+#fashion-news .lead-carousel .article h3 a:visited,
+#fashion-news .lead-carousel .article h3 a:hover{color:#fff!important;text-decoration-color:#168cff;}
+#fashion-news .lead-carousel .article .read{color:#fff!important;border-color:#168cff!important;}
 </style>
 </head>
 <body>
