@@ -540,10 +540,39 @@ header .site-icons .membership-link{background:#fff!important;color:#101022!impo
  header nav a{font-size:9px!important;letter-spacing:.8px!important}
 }
 
+
+/* Compact, collapsible navigation for desktop, tablet and mobile. */
+header .lang-switch{display:none!important}
+header .menu-toggle{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:35px;margin:0;padding:8px 12px;border:0;border-top:1px solid rgba(16,16,34,.18);background:transparent;color:#101022;font:700 9px/1 Arial,Helvetica,sans-serif;letter-spacing:1.8px;cursor:pointer}
+header .menu-toggle-label{display:inline-block}
+header .menu-chevron{display:inline-block;font-size:18px;font-weight:400;line-height:.8;transition:transform .2s ease}
+header .nav-drawer{display:none;padding:0 0 14px}
+header.menu-open .nav-drawer{display:block}
+header.menu-open .menu-chevron{transform:rotate(180deg)}
+header .drawer-language{display:flex;justify-content:center;align-items:center;gap:9px;padding:15px 0 13px;color:#101022;font-size:10px;letter-spacing:2px}
+header .drawer-language .lang-switch{display:flex!important;position:static!important;left:auto!important;right:auto!important;top:auto!important;margin:0!important;padding:0!important;justify-content:center!important;gap:8px!important;color:#101022!important}
+header .drawer-language .lang-switch a,header .drawer-language .lang-switch span{color:#101022!important;text-decoration-color:#101022!important}
+header .drawer-language .lang-switch a[aria-current="page"]{font-weight:700}
+header .nav-drawer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;margin:0;padding:15px 0 5px;border-top:1px solid rgba(16,16,34,.14);background:transparent;overflow:visible}
+header .nav-drawer nav a{color:#101022!important;font-size:10px;letter-spacing:1.25px;white-space:normal}
+header .nav-drawer nav a:hover{color:#5a1020!important}
+@media(max-width:800px){
+ header .menu-toggle{min-height:38px}
+ header .nav-drawer nav{justify-content:center;gap:12px 18px}
+ header .nav-drawer nav a{font-size:9px;letter-spacing:1px}
+}
+@media(max-width:480px){
+ header .nav-drawer{padding-bottom:10px}
+ header .drawer-language{padding:12px 0}
+ header .nav-drawer nav{gap:11px 14px;padding-top:12px}
+ header .nav-drawer nav a{font-size:9px;letter-spacing:.65px}
+}
+@media(prefers-reduced-motion:reduce){header .menu-chevron{transition:none}}
+
 </style>
 </head>
 <body>
-<header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html" aria-current="page">EN</a><span>/</span><a href="index-es.html">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Subscribe to L’AVOIR for free">SUBSCRIBE FREE ↓</a></div></div></div><nav><a href="#fashion-news">Fashion News</a><a href="#fashion-week">Fashion Week</a><a href="#houses">Houses</a><a href="#interviews">Interviews</a><a href="english-selection.html">English selection</a><a href="#press">Press Room</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#policies">Policies</a></nav></header>
+<header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html" aria-current="page">EN</a><span>/</span><a href="index-es.html">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Subscribe to L’AVOIR for free">SUBSCRIBE FREE ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">EXPLORE MENU</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><div class="drawer-language" aria-label="Language selection"></div><nav><a href="#fashion-news">Fashion News</a><a href="#fashion-week">Fashion Week</a><a href="#houses">Houses</a><a href="#interviews">Interviews</a><a href="english-selection.html">English selection</a><a href="#press">Press Room</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#policies">Policies</a></nav></div></header>
 <main>
 <section class="hero hero-cover"><div class="hero-copy"><div class="kicker">FASHION NEWS</div><h1>Victoria’s Secret: The Night Fashion Became a Spectacle</h1><div class="hero-rule"></div><p class="intro">Supermodels, monumental wings and a runway conceived as a global spectacle place the Victoria’s Secret Fashion Show at the intersection of fashion, performance and pop culture.</p><p class="language-note">Read the original report in Spanish.</p><a class="hero-read" href="https://lavoirarg.substack.com/p/victorias-secret-the-night-fashion?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Read the story →</a></div></section>
 
@@ -701,6 +730,34 @@ header .site-icons .membership-link{background:#fff!important;color:#101022!impo
  carousel.addEventListener('mouseenter',()=>clearInterval(timer));
  carousel.addEventListener('mouseleave',restart);
  show(0);restart();
+})();
+</script>
+
+
+<script>
+(function(){
+ const header=document.querySelector('header');
+ const toggle=header&&header.querySelector('.menu-toggle');
+ const drawer=header&&header.querySelector('.nav-drawer');
+ const language=header&&header.querySelector('.lang-switch');
+ const languageSlot=header&&header.querySelector('.drawer-language');
+ if(!header||!toggle||!drawer||!language||!languageSlot)return;
+ languageSlot.appendChild(language);
+ const label=toggle.querySelector('.menu-toggle-label');
+ const closedLabel="EXPLORE MENU";
+ const openLabel="CLOSE MENU";
+ function setOpen(open){
+   header.classList.toggle('menu-open',open);
+   toggle.setAttribute('aria-expanded',String(open));
+   label.textContent=open?openLabel:closedLabel;
+   if(open) drawer.removeAttribute('hidden'); else drawer.setAttribute('hidden','');
+ }
+ toggle.addEventListener('click',function(){setOpen(toggle.getAttribute('aria-expanded')!=='true')});
+ drawer.querySelectorAll('nav a').forEach(function(link){
+   link.addEventListener('click',function(){setOpen(false)});
+ });
+ document.addEventListener('keydown',function(event){if(event.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){setOpen(false);toggle.focus()}});
+ setOpen(false);
 })();
 </script>
 
