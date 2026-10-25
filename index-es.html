@@ -505,6 +505,35 @@ header .nav-drawer nav a:hover{color:#5a1020!important}
 @media(prefers-reduced-motion:reduce){header .menu-chevron{transition:none}}
 
 </style>
+<style>
+
+/* Stable centered masthead and scroll-direction header behavior. */
+header{transition:transform .28s ease,box-shadow .28s ease;will-change:transform}
+header.header-scroll-hidden{transform:translateY(calc(-100% - 2px));}
+header .top{position:relative!important}
+header .top>.brand{
+  position:absolute!important;left:50%!important;right:auto!important;top:0!important;
+  transform:translateX(-50%)!important;width:max-content!important;max-width:calc(100% - 24px)!important;
+  text-align:center!important;white-space:nowrap!important;z-index:2!important;
+  font-size:clamp(31px,5.4vw,68px)!important;letter-spacing:clamp(1px,.12em,8px)!important;
+  line-height:1.08!important;box-sizing:border-box!important;
+}
+@media(max-width:560px){
+  header .top{min-height:132px!important;height:132px!important;padding:0!important;display:block!important}
+  header .top>.brand{top:7px!important;font-size:clamp(30px,9.4vw,39px)!important;letter-spacing:.09em!important}
+  header .top>div:last-child{
+    position:absolute!important;left:0!important;right:0!important;top:58px!important;
+    width:100%!important;display:flex!important;flex-direction:column!important;
+    align-items:center!important;justify-content:flex-start!important;gap:4px!important;margin:0!important;
+  }
+  header .top .tag{position:static!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important;text-align:center!important;font-size:8px!important;letter-spacing:1.6px!important;line-height:1.4!important}
+  header .site-icons{position:static!important;display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:7px!important;margin:3px 0 0!important}
+  header .site-icons a{height:24px!important;min-width:22px!important;font-size:10px!important}
+  header .site-icons .membership-link{min-width:0!important;padding:0 9px!important;font-size:8px!important}
+}
+@media(prefers-reduced-motion:reduce){header{transition:none}}
+
+</style>
 </head>
 <body>
 <header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><span>/</span><a href="index-es.html" aria-current="page">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Suscribirse gratis a L’AVOIR">SUSCRIBITE GRATIS ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">ABRIR MENÚ</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><div class="drawer-language" aria-label="Language selection"></div><nav><a href="#fashion-news">Noticias de moda</a><a href="#fashion-week">Semana de la Moda</a><a href="#houses">Casas</a><a href="#interviews">Entrevistas</a><a href="#culture">Cultura</a><a href="#industry">Industria</a><a href="#press">Prensa</a><a href="#portfolio">Portfolio</a><a href="#about">Sobre L’AVOIR</a><a href="#policies">Políticas</a></nav></div></header>
@@ -691,6 +720,34 @@ header .nav-drawer nav a:hover{color:#5a1020!important}
  });
  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){setOpen(false);toggle.focus()}});
  setOpen(false);
+})();
+</script>
+
+
+<script>
+(function(){
+  const header=document.querySelector('header');
+  if(!header)return;
+  let lastY=window.scrollY||0;
+  let ticking=false;
+  function update(){
+    const y=window.scrollY||0;
+    const menuOpen=header.classList.contains('menu-open');
+    if(menuOpen||y<100){
+      header.classList.remove('header-scroll-hidden');
+    }else if(y>lastY+3){
+      header.classList.add('header-scroll-hidden');
+    }else if(y<lastY-3){
+      header.classList.remove('header-scroll-hidden');
+    }
+    lastY=y;
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){window.requestAnimationFrame(update);ticking=true;}
+  },{passive:true});
+  const toggle=header.querySelector('.menu-toggle');
+  if(toggle)toggle.addEventListener('click',function(){header.classList.remove('header-scroll-hidden')});
 })();
 </script>
 
