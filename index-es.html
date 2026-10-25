@@ -435,6 +435,35 @@ header .top .tag{left:auto!important;right:0!important;top:58px!important;text-a
 @media(max-width:560px){
  header .top .tag{left:auto!important;right:0!important;top:14px!important;text-align:right!important;color:#fff!important}
 }
+/* Responsive masthead controls: language left, social links right, all white. */
+header .lang-switch{left:3.8vw!important;right:auto!important;color:#fff!important}
+header .lang-switch a,header .lang-switch span{color:#fff!important}
+header .site-icons{right:3.8vw!important;left:auto!important}
+header .site-icons a{color:#fff!important;border-color:rgba(255,255,255,.48)!important}
+header .site-icons a:hover{color:#fff!important;border-color:#fff!important}
+header .site-icons .membership-link{background:#fff!important;color:#101022!important;border-color:#fff!important}
+@media(max-width:800px){
+ header .top{min-height:142px!important;display:block!important}
+ header .top>.brand{top:38px!important;left:50%!important;transform:translateX(-50%)!important}
+ header .top>div:last-child{display:contents}
+ header .lang-switch{left:0!important;top:5px!important;right:auto!important;margin:0!important;justify-content:flex-start!important;gap:5px!important;font-size:10px!important}
+ header .site-icons{left:auto!important;right:0!important;top:0!important;margin:0!important;justify-content:flex-end!important;gap:5px!important;flex-wrap:wrap!important;max-width:68%}
+ header .site-icons a{min-width:23px!important;width:25px!important;height:28px!important;font-size:10px!important}
+ header .site-icons .membership-link{width:auto!important;min-width:0!important;padding:0 8px!important;font-size:8px!important}
+ header .tag{position:absolute!important;top:91px!important;right:0!important;left:0!important;padding-top:0!important;text-align:center!important;font-size:8px!important;letter-spacing:1.5px!important;color:#fff!important}
+ header nav{flex-wrap:wrap!important;overflow:visible!important;justify-content:center!important;gap:10px 15px!important}
+}
+@media(max-width:420px){
+ header .top{min-height:145px!important}
+ header .top>.brand{font-size:clamp(31px,10vw,39px)!important;letter-spacing:.11em!important;top:40px!important}
+ header .site-icons{top:1px!important;max-width:73%!important;gap:2px!important}
+ header .site-icons a{min-width:20px!important;width:22px!important;height:25px!important;font-size:9px!important}
+ header .site-icons .membership-link{padding:0 5px!important;font-size:7px!important;letter-spacing:.5px!important}
+ header .tag{top:91px!important;letter-spacing:1.1px!important}
+ header nav{gap:9px 12px!important}
+ header nav a{font-size:9px!important;letter-spacing:.8px!important}
+}
+
 </style>
 </head>
 <body>
