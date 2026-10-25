@@ -402,6 +402,17 @@ header{padding:10px clamp(18px,4vw,60px) 0;min-height:140px}header .top{min-heig
 @media(max-width:900px){.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}header .top .tag{max-width:100px;font-size:8px}header .site-icons{gap:5px}.hero.hero-cover{min-height:390px}}
 @media(max-width:560px){header .top{min-height:112px}header .top>.brand{font-size:37px}header .top>div:last-child{top:52px;left:0;right:auto}header .top .tag{left:auto;right:0;top:14px;text-align:right}.lang-switch{margin-top:0!important}.site-icons{margin-top:6px!important}.featured-grid{grid-template-columns:1fr 1fr;gap:12px}.feature-card h3{font-size:19px}.hero.hero-cover{padding:38px 22px;min-height:430px}.hero.hero-cover:before{background-image:linear-gradient(90deg,rgba(5,5,5,.96),rgba(5,5,5,.58)),url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85')}}
 
+
+/* High-contrast menu: white typography throughout the opened drawer. */
+header .menu-toggle{background:#101022!important;color:#fff!important;border-top:0!important}
+header .menu-toggle:hover,header .menu-toggle:focus-visible{background:#5a1020!important;color:#fff!important}
+header .nav-drawer{background:#101022!important;color:#fff!important;padding:0 18px 18px!important}
+header .drawer-language,header .drawer-language .lang-switch,header .drawer-language .lang-switch a,header .drawer-language .lang-switch span{color:#fff!important}
+header .drawer-language .lang-switch a,header .drawer-language .lang-switch span{text-decoration-color:#fff!important}
+header .nav-drawer nav{border-top:1px solid rgba(255,255,255,.25)!important;background:#101022!important}
+header .nav-drawer nav a,header .nav-drawer nav a:visited{color:#fff!important}
+header .nav-drawer nav a:hover,header .nav-drawer nav a:focus-visible{color:#e8c8d0!important}
+
 </style>
 <style>
 /* Mobile-only supporting news card: Mirta Armesto fashion show */
