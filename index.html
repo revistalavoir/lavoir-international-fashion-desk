@@ -610,6 +610,23 @@ header .top>.brand{
 @media(prefers-reduced-motion:reduce){header{transition:none}}
 
 </style>
+
+<style>
+/* Compact navigation spacing: keep the drawer neat and shorter. */
+header .nav-drawer{padding:0 14px 6px!important}
+header .drawer-language{padding:6px 0 7px!important;gap:6px!important;min-height:0!important}
+header .nav-drawer nav{gap:6px 16px!important;padding:8px 0 2px!important;margin:0!important;line-height:1.2!important}
+header .nav-drawer nav a{padding:3px 0!important;font-size:9px!important;letter-spacing:.8px!important;line-height:1.25!important}
+header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
+@media(max-width:560px){
+ header .nav-drawer{padding:0 18px 8px!important}
+ header .drawer-language{padding:5px 0 6px!important}
+ header .nav-drawer nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:2px 18px!important;padding:7px 0 0!important;justify-content:initial!important}
+ header .nav-drawer nav a{display:block!important;padding:6px 2px!important;text-align:left!important;font-size:9px!important;letter-spacing:.55px!important;white-space:normal!important}
+}
+@media(prefers-reduced-motion:reduce){header .nav-drawer nav a{transition:none!important}}
+</style>
+
 </head>
 <body>
 <header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html" aria-current="page">EN</a><span>/</span><a href="index-es.html">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Subscribe to L’AVOIR for free">SUBSCRIBE FREE ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">EXPLORE MENU</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><div class="drawer-language" aria-label="Language selection"></div><nav><a href="#fashion-news">Fashion News</a><a href="#fashion-week">Fashion Week</a><a href="#houses">Houses</a><a href="#interviews">Interviews</a><a href="english-selection.html">English selection</a><a href="#press">Press Room</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#policies">Policies</a></nav></div></header>
