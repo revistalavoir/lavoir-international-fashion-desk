@@ -551,6 +551,25 @@ header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
 @media(prefers-reduced-motion:reduce){header .nav-drawer nav a{transition:none!important}}
 </style>
 
+
+<style id="featured-carousel-styles">
+.featured-head{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.featured-head>div:first-child{min-width:0}
+.featured-controls{display:flex;gap:8px;flex-shrink:0}
+.featured-arrow{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #101022;background:transparent;color:#101022;font-size:22px;line-height:1;cursor:pointer;transition:background .2s,color .2s}
+.featured-arrow:hover,.featured-arrow:focus-visible{background:#101022;color:#f7f3ee}
+.featured-viewport{overflow:hidden;width:100%}
+.featured-grid{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;padding-bottom:8px}
+.featured-grid::-webkit-scrollbar{display:none}
+.featured-grid .feature-card{flex:0 0 calc((100% - 44px)/3);min-width:0;scroll-snap-align:start;border-right:0!important;padding-right:0!important}
+.featured-grid .feature-card:first-child{border-right:0!important}
+.featured-grid .feature-image{aspect-ratio:4/3}
+.featured-grid .feature-card h3{font-size:clamp(21px,2.1vw,29px)}
+.featured-grid .feature-card p{margin-bottom:18px}
+@media(max-width:800px){.featured-grid{gap:16px}.featured-grid .feature-card{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:520px){.featured-head{align-items:flex-start}.featured-controls{padding-top:2px}.featured-arrow{width:36px;height:36px}.featured-grid{gap:14px}.featured-grid .feature-card{flex-basis:100%}.featured-head h2{font-size:24px}.featured-head span{display:block;margin-top:5px}}
+@media(prefers-reduced-motion:reduce){.featured-grid{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 <header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><span>/</span><a href="index-es.html" aria-current="page">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Suscribirse gratis a L’AVOIR">SUSCRIBITE GRATIS ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">ABRIR MENÚ</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><div class="drawer-language" aria-label="Language selection"></div><nav><a href="#fashion-news">Noticias de moda</a><a href="#fashion-week">Semana de la Moda</a><a href="#houses">Casas</a><a href="#interviews">Entrevistas</a><a href="#culture">Cultura</a><a href="#industry">Industria</a><a href="#press">Prensa</a><a href="#portfolio">Portfolio</a><a href="#about">Sobre L’AVOIR</a><a href="#policies">Políticas</a></nav></div></header>
@@ -558,13 +577,13 @@ header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
 <section class="hero hero-cover"><div class="hero-copy"><div class="kicker">NOTICIAS DE MODA</div><h1>Alexander McQueen: Seán McGirr deja la dirección creativa</h1><div class="hero-rule"></div><p class="intro">La casa británica, propiedad del grupo Kering, inicia una nueva etapa tras la salida del diseñador irlandés, quien había asumido el cargo en 2023.</p><a class="hero-read" href="https://lavoirarg.substack.com/p/alexander-mcqueen-sean-mcgirr-deja?r=8o6915&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=true" target="_blank" rel="noopener">Leer la noticia completa →</a></div></section>
 
 <section class="featured" aria-label="Historias destacadas">
-<div class="featured-head"><h2>Historias destacadas</h2><span>La mirada editorial de L’AVOIR</span></div>
-<div class="featured-grid">
-<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Diseño de moda contemporánea" loading="lazy"></div><div class="image-credit">Imagen ilustrativa · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Licencia de Unsplash</a></div><div class="feature-label">Diseñadores · Moda y tecnología</div><h3>Hussein Chalayan en foco: ¿puede la moda pensar más allá de la prenda?</h3><p>Un recorrido por el enfoque conceptual de Hussein Chalayan, donde diseño, tecnología y nuevas ideas sobre el cuerpo desafían los límites de la indumentaria.</p><a href="https://lavoirarg.substack.com/p/hussein-chalayan-in-focus-can-fashion?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
-<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Moda contemporánea de temporada" loading="lazy"></div><div class="image-credit">Imagen ilustrativa · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Licencia de Unsplash</a></div><div class="feature-label">Negocio de moda · Colaboraciones</div><h3>Los últimos movimientos de la moda: Gap x Victoria Beckham</h3><p>Gap y Victoria Beckham regresan con una colección otoño-invierno 2026 centrada en tejidos de punto, abrigos, denim y básicos contemporáneos.</p><a href="https://lavoirarg.substack.com/p/fashions-latest-moves-gap-x-victoria?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
-<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Interior de una boutique contemporánea" loading="lazy"></div><div class="image-credit">Imagen ilustrativa · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Licencia de Unsplash</a></div><div class="feature-label">Retail · Montreal</div><h3>Quartz &amp; Co abre una nueva boutique en Montreal</h3><p>La apertura de un nuevo espacio en Montreal pone el foco en la expansión del retail y en el papel de las tiendas físicas dentro de la moda y el estilo de vida.</p><a href="https://lavoirarg.substack.com/p/quartz-co-opens-new-montreal-boutique?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
-<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Evento cultural y de moda nocturno" loading="lazy"></div><div class="image-credit">Imagen ilustrativa · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Licencia de Unsplash</a></div><div class="feature-label">Argentina · Evento de moda</div><h3>Fashion Night Out: Santiago del Estero</h3><p>Un evento regional de moda destaca la creatividad local, a sus diseñadores y a la comunidad de la industria en la ciudad.</p><a href="https://lavoirarg.substack.com/p/fashion-night-out-santiago-del-estero?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
-</div></section>
+<div class="featured-head"><div><h2>Historias destacadas</h2><span>La mirada editorial de L’AVOIR</span></div><div class="featured-controls"><button type="button" class="featured-arrow featured-prev" aria-label="Historias anteriores">←</button><button type="button" class="featured-arrow featured-next" aria-label="Historias siguientes">→</button></div></div>
+<div class="featured-viewport"><div class="featured-grid">
+<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85" alt="Moda de lujo para la temporada festiva" loading="lazy"></div><div class="feature-label">Colección festiva · Lujo</div><h3>Net-a-Porter reúne a 42 marcas en una colección festiva</h3><p>La plataforma de lujo convoca a casas y diseñadores internacionales para una colección cápsula exclusiva de temporada.</p><a href="https://lavoirarg.substack.com/p/net-a-porter-brings-together-42-brands?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
+<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85" alt="Calzado deportivo y diseño contemporáneo" loading="lazy"></div><div class="feature-label">Colaboración · Running</div><h3>Nike y Our Legacy se unen en una nueva colección</h3><p>La colaboración combina tecnología deportiva, estética urbana y experimentación con materiales reutilizados.</p><a href="https://lavoirarg.substack.com/p/nike-and-our-legacy-join-forces-on?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
+<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" alt="Diseño de moda y vestidos de ocasión" loading="lazy"></div><div class="feature-label">Industria · Australia</div><h3>Shona Joy cerrará tras 26 años en la moda</h3><p>La diseñadora Shona Thatcher anunció el cierre de su firma para priorizar a su familia, poniendo fin a una trayectoria de más de dos décadas.</p><a href="https://lavoirarg.substack.com/p/shona-joy-to-close-after-26-years?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
+<article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85" alt="Estilo contemporáneo y cultura digital" loading="lazy"></div><div class="feature-label">Personas · Moda y cultura digital</div><h3>Ashtin Earle amplía su presencia en la industria de la moda</h3><p>De las redes sociales a los eventos internacionales, la creadora de contenido gana visibilidad en la conversación entre lujo, belleza y moda.</p><a href="https://lavoirarg.substack.com/p/ashtin-earle-expands-her-presence?r=8o6915" target="_blank" rel="noopener noreferrer">Leer la historia en Substack →</a></article>
+</div></div></section>
 <section id="fashion-news"><div class="section-head"><h2>Noticias de moda</h2><span>Actualidad del mundo de la moda</span></div>
 <article class="article mobile-news-card"><div class="meta">Mirta Armesto · Buenos Aires<br>17 de octubre de 2026</div><div><h3>Nicole Neumann y Sofía Zámolo asistieron a un exclusivo desfile en Buenos Aires</h3><p>La diseñadora Mirta Armesto reunió a amigas, clientas y figuras del espectáculo en una presentación con la presencia de las modelos y conductoras Nicole Neumann y Sofía Zámolo.</p><a class="read" href="desfile-moda-nicole-neumann-sofia-zamolo.html">Leer la noticia completa →</a></div></article>
 
@@ -768,4 +787,20 @@ header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
 })();
 </script>
 
+
+<script id="featured-carousel-script">
+(function(){
+ const section=document.querySelector('.featured');
+ if(!section)return;
+ const track=section.querySelector('.featured-grid');
+ const prev=section.querySelector('.featured-prev');
+ const next=section.querySelector('.featured-next');
+ if(!track||!prev||!next)return;
+ function step(){const card=track.querySelector('.feature-card');return card?card.getBoundingClientRect().width+parseFloat(getComputedStyle(track).gap||0):track.clientWidth*.8}
+ prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+ next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+ function update(){prev.disabled=track.scrollLeft<=2;next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-2}
+ track.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update();
+})();
+</script>
 </body></html>
