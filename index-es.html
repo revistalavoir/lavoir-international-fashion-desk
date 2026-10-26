@@ -415,6 +415,39 @@ header .nav-drawer nav{border-top:1px solid rgba(255,255,255,.25)!important;back
 header .nav-drawer nav a,header .nav-drawer nav a:visited{color:#fff!important}
 header .nav-drawer nav a:hover,header .nav-drawer nav a:focus-visible{color:#e8c8d0!important}
 
+
+/* FIX MENU: all labels stay white; a white indicator follows the selected section. */
+header nav a, header nav a:link, header nav a:visited, header .nav-drawer nav a, header .nav-drawer nav a:visited {
+  color: #fff !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+  position: relative;
+  transition: color .2s ease, opacity .2s ease;
+}
+header nav a::after, header .nav-drawer nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .22s ease;
+}
+header nav a:hover::after, header nav a:focus-visible::after,
+header nav a.is-current::after, header .nav-drawer nav a:hover::after,
+header .nav-drawer nav a:focus-visible::after, header .nav-drawer nav a.is-current::after {
+  transform: scaleX(1);
+}
+header nav a:hover, header nav a:focus-visible, header nav a.is-current,
+header .nav-drawer nav a:hover, header .nav-drawer nav a:focus-visible,
+header .nav-drawer nav a.is-current { color: #fff !important; opacity: 1 !important; }
+@media (max-width: 800px) {
+  header nav a::after, header .nav-drawer nav a::after { bottom: -4px; }
+}
+
 </style>
 <style>
 /* Mobile-only supporting news card: Mirta Armesto fashion show */
@@ -805,4 +838,31 @@ header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
  track.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update();
 })();
 </script>
+
+<script id="menu-white-indicator-fix">
+(function(){
+  const header = document.querySelector('header');
+  if (!header) return;
+  const links = Array.from(header.querySelectorAll('nav a[href*="#"]'));
+  function activate(link){
+    header.querySelectorAll('nav a.is-current').forEach(a=>a.classList.remove('is-current'));
+    if(link) link.classList.add('is-current');
+  }
+  links.forEach(link=>{
+    link.addEventListener('click', function(){
+      activate(link);
+      header.classList.remove('header-scroll-hidden');
+    });
+  });
+  const sections = links.map(link=>({link, section:document.querySelector(link.getAttribute('href'))})).filter(x=>x.section);
+  if ('IntersectionObserver' in window && sections.length){
+    const observer = new IntersectionObserver(entries=>{
+      const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(visible){const item=sections.find(x=>x.section===visible.target);if(item)activate(item.link);}
+    }, {rootMargin:'-18% 0px -62% 0px',threshold:[0,.1,.25,.5]});
+    sections.forEach(x=>observer.observe(x.section));
+  }
+})();
+</script>
+
 </body></html>
