@@ -605,6 +605,33 @@ header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
 @media(max-width:520px){.featured-head{align-items:flex-start}.featured-controls{padding-top:2px}.featured-arrow{width:36px;height:36px}.featured-grid{gap:14px}.featured-grid .feature-card{flex-basis:100%}.featured-head h2{font-size:24px}.featured-head span{display:block;margin-top:5px}}
 @media(prefers-reduced-motion:reduce){.featured-grid{scroll-behavior:auto}}
 </style>
+
+<style id="lavoir-final-menu-fix">
+/* Final override: keep every menu label white and make the active item unmistakable. */
+header .nav-drawer nav a,
+header .nav-drawer nav a:link,
+header .nav-drawer nav a:visited {
+  display:inline-block !important;
+  position:relative !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  text-decoration:none !important;
+  border-bottom:2px solid transparent !important;
+  padding:7px 0 9px !important;
+  transition:border-color .22s ease, text-shadow .22s ease !important;
+}
+header .nav-drawer nav a:hover,
+header .nav-drawer nav a:focus-visible,
+header .nav-drawer nav a.is-current {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  border-bottom-color:#fff !important;
+  text-shadow:0 0 10px rgba(255,255,255,.3) !important;
+}
+header .nav-drawer nav a::after { display:none !important; }
+</style>
+
 </head>
 <body>
 <header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="lang-switch" aria-label="Language"><a href="index.html">EN</a><span>/</span><a href="index-es.html" aria-current="page">ES</a></div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Suscribirse gratis a L’AVOIR">SUSCRIBITE GRATIS ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">ABRIR MENÚ</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><div class="drawer-language" aria-label="Language selection"></div><nav><a href="#fashion-news">Noticias de moda</a><a href="#fashion-week">Semana de la Moda</a><a href="#houses">Casas</a><a href="#interviews">Entrevistas</a><a href="#culture">Cultura</a><a href="#industry">Industria</a><a href="#press">Prensa</a><a href="#portfolio">Portfolio</a><a href="#about">Sobre L’AVOIR</a><a href="#policies">Políticas</a></nav></div></header>
@@ -862,6 +889,42 @@ header .menu-toggle{min-height:31px!important;padding:6px 10px!important}
     }, {rootMargin:'-18% 0px -62% 0px',threshold:[0,.1,.25,.5]});
     sections.forEach(x=>observer.observe(x.section));
   }
+})();
+</script>
+
+
+<script id="lavoir-final-menu-indicator">
+(function(){
+ function init(){
+  const header=document.querySelector('header');
+  if(!header)return;
+  const links=Array.from(header.querySelectorAll('.nav-drawer nav a'));
+  const sections=links.map(link=>{
+   const href=link.getAttribute('href')||'';
+   if(!href.startsWith('#')||href.length<2)return null;
+   return {link,section:document.getElementById(href.slice(1))};
+  }).filter(x=>x&&x.section);
+  function activate(link){
+   links.forEach(a=>a.classList.toggle('is-current',a===link));
+  }
+  links.forEach(link=>link.addEventListener('click',()=>activate(link)));
+  function update(){
+   let best=null, distance=Infinity;
+   sections.forEach(item=>{
+    const r=item.section.getBoundingClientRect();
+    if(r.top<=window.innerHeight*.55 && r.bottom>window.innerHeight*.18){
+     const d=Math.abs(r.top-window.innerHeight*.25);
+     if(d<distance){best=item;distance=d;}
+    }
+   });
+   if(best)activate(best.link);
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+ else init();
 })();
 </script>
 
