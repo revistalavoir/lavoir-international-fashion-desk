@@ -707,9 +707,90 @@ header .nav-drawer nav a.is-current {
 header .nav-drawer nav a::after { display:none !important; }
 </style>
 
+
+<style id="lavoir-portal-reorganisation">
+:root{--portal-ink:#111118;--portal-paper:#fff;--portal-blue:#174bff;--portal-muted:#666875;--portal-rule:#dedfe5}
+html{scroll-padding-top:24px}
+body{background:var(--portal-paper)!important;color:var(--portal-ink)!important;font-family:Arial,Helvetica,sans-serif}
+header{background:#fff!important;color:var(--portal-ink)!important;border-bottom:1px solid var(--portal-rule)!important;padding:14px clamp(18px,4vw,64px) 0!important;position:relative!important}
+header .top{min-height:112px!important;align-items:flex-start!important}
+header .top>.brand{color:var(--portal-ink)!important;font-family:"Bodoni MT",Didot,Georgia,serif!important;font-size:clamp(42px,6vw,78px)!important;letter-spacing:.16em!important}
+header .tag{color:var(--portal-muted)!important;font-size:9px!important;letter-spacing:2.6px!important}
+header .site-icons a{color:var(--portal-ink)!important;border-color:var(--portal-rule)!important}
+header .site-icons .membership-link{background:var(--portal-blue)!important;color:#fff!important;border:0!important}
+header .lang-switch a{color:var(--portal-ink)!important}
+header .menu-toggle{color:var(--portal-ink)!important;border-color:var(--portal-rule)!important}
+header .nav-drawer{background:#fff!important}
+header nav{margin:0!important;padding:16px 0 17px!important;border-top:1px solid var(--portal-rule)!important;display:flex!important;justify-content:space-between!important;gap:12px 22px!important}
+header nav a{color:var(--portal-ink)!important;font-size:10px!important;font-weight:700!important;letter-spacing:1.1px!important}
+header nav a:hover,header nav a.is-current{color:var(--portal-blue)!important}
+main{max-width:none!important;padding:0!important}
+.hero-cover{min-height:clamp(420px,48vw,650px)!important;padding:clamp(35px,6vw,90px) clamp(20px,6vw,90px) 48px!important;background-position:center 34%!important}
+.hero-copy{max-width:580px!important}
+.hero-cover .kicker{color:#fff!important;font-weight:700!important}
+.hero-cover h1{font-size:clamp(34px,4.2vw,60px)!important;line-height:1.04!important;letter-spacing:-.035em!important}
+.hero-cover .intro{font-size:clamp(15px,1.35vw,18px)!important;line-height:1.65!important}
+.hero-read{background:var(--portal-blue)!important;border:0!important;padding:13px 18px!important;color:#fff!important;font-weight:700!important}
+.featured,main>section:not(.hero){width:min(1380px,92vw)!important;margin-left:auto!important;margin-right:auto!important}
+.featured{padding:54px 0 58px!important}
+.featured-head{border-bottom:2px solid var(--portal-ink)!important}
+.featured-head h2,.section-head h2{font-family:Georgia,serif!important;color:var(--portal-ink)!important}
+.featured-head h2{font-size:clamp(27px,3vw,38px)!important}
+.feature-card h3{font-family:Georgia,serif!important;color:var(--portal-ink)!important}
+.feature-card a,.read{color:var(--portal-blue)!important;border-color:var(--portal-blue)!important;font-weight:700!important}
+.feature-image{background:#eceef2!important}
+section{padding:52px 0!important;border-bottom:1px solid var(--portal-rule)!important}
+.section-head{padding-bottom:14px!important;border-bottom:2px solid var(--portal-ink)!important;margin-bottom:26px!important}
+.section-head h2{font-size:clamp(27px,3vw,38px)!important}
+.section-head span,.meta,.feature-label{color:var(--portal-muted)!important}
+#fashion-news{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+#fashion-news>.section-head{grid-column:1/-1!important}
+#fashion-news .article{display:flex!important;flex-direction:column!important;gap:12px!important;background:#f7f7f9!important;border:1px solid var(--portal-rule)!important;padding:22px!important;margin:0!important;min-width:0!important}
+#fashion-news .article h3{font-size:clamp(20px,2vw,27px)!important;line-height:1.14!important}
+#fashion-news .article h3 a{color:var(--portal-ink)!important;text-decoration:none!important}
+#fashion-news .article h3 a:hover{color:var(--portal-blue)!important}
+#fashion-news .article p{font-size:13px!important;line-height:1.65!important;color:#555965!important}
+#fashion-news .article .read{margin-top:auto!important;padding-top:8px!important;align-self:flex-start!important}
+#fashion-news .article:first-of-type{grid-column:auto!important;display:flex!important;background:#eef1ff!important;border-color:#d9dfff!important;color:var(--portal-ink)!important}
+#fashion-news .article:first-of-type .meta,#fashion-news .article:first-of-type p{color:#555965!important}
+#fashion-news .article:first-of-type h3{font-size:clamp(20px,2vw,27px)!important}
+#fashion-week{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 28px!important}
+#fashion-week>.section-head{grid-column:1/-1!important}
+#fashion-week .article{display:block!important;padding:24px 0!important;border-top:1px solid var(--portal-rule)!important}
+#fashion-week .article h3 a{color:var(--portal-ink)!important;text-decoration:none!important}
+#houses .grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:1px!important;background:var(--portal-rule)!important;border:1px solid var(--portal-rule)!important}
+#houses .card{background:#f7f7f9!important;min-height:170px!important}
+#houses .card h3{color:var(--portal-ink)!important}
+.press{background:#111118!important}
+.press h3{color:#fff!important}
+.press p{color:#e5e5eb!important}
+.press a{color:#fff!important;border-color:#fff!important}
+footer{background:#111118!important;color:#d5d5dc!important;border:0!important}
+footer a{color:#fff!important}
+@media(max-width:900px){
+ header .top{min-height:120px!important}
+ header nav{justify-content:flex-start!important;overflow-x:auto!important;flex-wrap:nowrap!important;white-space:nowrap!important}
+ #fashion-news{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #fashion-week{grid-template-columns:1fr!important}
+ #fashion-week>.section-head{grid-column:auto!important}
+ #houses .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:560px){
+ header{padding-left:18px!important;padding-right:18px!important}
+ header .top>.brand{font-size:clamp(34px,9vw,48px)!important}
+ .hero-cover{min-height:470px!important}
+ .hero-cover h1{font-size:34px!important}
+ .featured,main>section:not(.hero){width:calc(100% - 36px)!important}
+ .featured{padding:38px 0!important}
+ #fashion-news{grid-template-columns:1fr!important}
+ #houses .grid{grid-template-columns:1fr 1fr!important}
+ section{padding:38px 0!important}
+}
+</style>
+
 </head>
 <body>
-<header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Subscribe to L’AVOIR for free">SUBSCRIBE FREE ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">EXPLORE MENU</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><nav><a href="#fashion-news">Fashion News</a><a href="#fashion-week">Fashion Week</a><a href="#houses">Houses</a><a href="#interviews">Interviews</a><a href="english-selection.html">Editorial Archive</a><a href="#press">Press Room</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#policies">Policies</a></nav></div></header>
+<header><div class="top"><div class="brand">L’AVOIR</div><div><div class="tag">International Fashion Desk</div><div class="site-icons" aria-label="L’AVOIR direct links"><a href="https://www.instagram.com/lavoir.editorial/" target="_blank" rel="noopener" title="Instagram">IG</a><a href="https://lavoirarg.substack.com/" target="_blank" rel="noopener" title="Substack">S</a><a href="https://www.linkedin.com/in/revistalavoir" target="_blank" rel="noopener" title="LinkedIn">in</a><a href="https://x.com/LAVOIRARG" target="_blank" rel="noopener" title="X — L’AVOIR">@</a><a class="membership-link subscribe-trigger" href="#subscribe-modal" aria-label="Subscribe to L’AVOIR for free">SUBSCRIBE FREE ↓</a></div></div></div><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle-label">EXPLORE MENU</span><span class="menu-chevron" aria-hidden="true">⌄</span></button><div class="nav-drawer" id="site-menu"><nav aria-label="Main navigation"><a href="#fashion-news">Latest Stories</a><a href="#fashion-week">Fashion</a><a href="#culture">Culture</a><a href="#industry">Industry</a><a href="#houses">Fashion Houses</a><a href="#interviews">Interviews</a><a href="english-selection.html">Archive</a><a href="#press">Press Room</a></nav></div></header>
 <main>
 <section class="hero hero-cover"><div class="hero-copy"><div class="kicker">INDUSTRY MOVES · FASHION BUSINESS</div><h1>Hanifa Returns After an Eight-Month Hiatus as Tod’s Parts Ways With Matteo Tamburini</h1><div class="hero-rule"></div><p class="intro">Anifa Mvuemba prepares a new chapter for Hanifa with a revamped business model, while Italian luxury house Tod’s confirms the departure of creative director Matteo Tamburini.</p><p class="language-note">Read the full report on Substack.</p><a class="hero-read" href="https://lavoirarg.substack.com/p/industry-moves-hanifa-returns-as?r=8o6915" target="_blank" rel="noopener noreferrer">Read the story →</a></div></section>
 
@@ -721,7 +802,7 @@ header .nav-drawer nav a::after { display:none !important; }
 <article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" alt="Contemporary occasionwear" loading="lazy"></div><div class="feature-label">Industry · Australia</div><h3>Shona Joy to Close After 26 Years in Fashion</h3><p>Designer Shona Thatcher has announced the closure of her label to prioritize her family, concluding a journey spanning more than two decades.</p><a href="https://lavoirarg.substack.com/p/shona-joy-to-close-after-26-years?r=8o6915" target="_blank" rel="noopener noreferrer">Read the story on Substack →</a></article>
 <article class="feature-card"><div class="feature-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85" alt="Contemporary style and digital culture" loading="lazy"></div><div class="feature-label">People · Digital Fashion</div><h3>Ashtin Earle Expands Her Presence in the Fashion Industry</h3><p>From social media to international fashion events, the content creator is building visibility across luxury, beauty, and fashion.</p><a href="https://lavoirarg.substack.com/p/ashtin-earle-expands-her-presence?r=8o6915" target="_blank" rel="noopener noreferrer">Read the story on Substack →</a></article>
 </div></div></section>
-<section id="fashion-news"><div class="section-head"><h2>Fashion News</h2><span>News from the World of Fashion</span></div>
+<section id="fashion-news"><div class="section-head"><h2>Latest Stories</h2><span>Fashion · Culture · Industry · International Affairs</span></div>
 <article class="article mobile-news-card"><div class="meta">Film &amp; Entertainment · New York<br>17 November 2026</div><div><h3><a href="https://lavoirarg.substack.com/p/historic-reunion-in-new-york-the?r=8o6915&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener noreferrer">Historic Reunion in New York: The Hunger Games: Sunrise on the Reaping Premiere Brings Together Three Generations of Panem</a></h3><p>Jennifer Lawrence and Josh Hutcherson reunited with the new cast at the world premiere, bringing together three generations of the franchise ahead of its global theatrical release.</p><a class="read" href="https://lavoirarg.substack.com/p/historic-reunion-in-new-york-the?r=8o6915&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener noreferrer">Read the full story on Substack →</a></div></article>
 <article class="article mobile-news-card"><div class="meta">Film &amp; Entertainment · Awards Season<br>16 November 2026</div><div><h3><a href="https://lavoirarg.substack.com/p/governors-awards-2026-the-night-hollywood?r=8o6915" target="_blank" rel="noopener noreferrer">Governors Awards 2026: The Night Hollywood Kicked Off the Oscar Race Amid Historic Tributes and Haute Couture</a></h3><p>Glenn Close received an Honorary Oscar as the Academy celebrated influential film careers and Hollywood’s red carpet set the tone for the 2026–27 awards season.</p><a class="read" href="https://lavoirarg.substack.com/p/governors-awards-2026-the-night-hollywood?r=8o6915" target="_blank" rel="noopener noreferrer">Read the full story on Substack →</a></div></article>
 
